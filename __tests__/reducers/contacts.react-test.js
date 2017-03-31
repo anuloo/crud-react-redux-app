@@ -1,10 +1,15 @@
 import request from '../../app/reducers/contacts';
-
+const INITIAL_STATE = { contactsList: {contacts: [], error:null, loading: true},
+							newContact:{contact:null, error: null, loading: false}, 
+							selectedContact:{contact:null, error:null, loading: false}, 
+							deletedContact: {contact:null, error:null, loading: false},
+              updatedContact: {contact:null, error:null, loading: false}
+						};
 describe('Contacts Reducer', () => {
     it('has default state', () => {
         expect(request(undefined, {type: 'unexpected'}))
         .toEqual({
-            contactsList: {contacts: [], error:null, loading: false}
+            INITIAL_STATE
         });
     });
 
@@ -12,7 +17,7 @@ describe('Contacts Reducer', () => {
         expect(request(undefined, {
             type: 'FETCH_CONTACTS',
         }))
-        .toEqual({ contactsList: {contacts: [], error:null, loading: true}});
+        .toEqual(INITIAL_STATE);
     });
 
 });

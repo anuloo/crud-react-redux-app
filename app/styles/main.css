@@ -14,14 +14,12 @@ h2{
   margin-right: 24px;
 }
 
-.navbar-inverse .navbar-nav>li>a,
-.navbar-text a{
+.navbar-inverse .navbar-nav>li>a{
     color: #fff;
     text-decoration: none;
 }
 
-.navbar-inverse .navbar-nav>li>a:hover,
-.navbar-text a:hover{
+.navbar-inverse .navbar-nav>li>a:hover{
     color: #91bce0;
     text-decoration: none;
 }
@@ -33,5 +31,9 @@ h2{
     font-size: 1.2em;
     text-decoration: none;
     margin: 24px 11px 0;
+}
+
+.form-group div .btn-warning {
+   margin-left: 10px;
 }
 
